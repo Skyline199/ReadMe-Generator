@@ -10,49 +10,41 @@ const questions = [
         name: "title",
         message: "Please name the title of your project?",
     },
+   
     {
         type: "input",
-        name: "title",
-        message: "Please name the sections?",
-    },
-    {
-        type: "input",
-        name: "title",
+        name: "Description",
         message: "Please describe your project?",
     },
+  
     {
         type: "input",
-        name: "title",
-        message: "Please input your table of contents?",
-    },
-    {
-        type: "input",
-        name: "title",
+        name: "Installation",
         message: "what type of installation will this be?",
     },
     {
         type: "input",
-        name: "title",
+        name: "usage",
         message: "what will this be used for?",
     },
     {
         type: "input",
-        name: "title",
+        name: "License",
         message: "What license are you using for this?",
     },
     {
         type: "input",
-        name: "title",
+        name: "Contributing",
         message: "Who is contributing to this project?",
     },
     {
         type: "input",
-        name: "title",
+        name: "Tests",
         message: "what tests will be done?",
     },
     {
         type: "input",
-        name: "title",
+        name: "Questions",
         message: "What questions will this have?",
     },
 
@@ -60,15 +52,16 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(preocess.cwd(),fileName),data)
+    return fs.writeFileSync(path.join(__dirname,`./destination/${fileName}`),data)
 }
 
 // function to initialize program
 function init() {
-inquirer.createPromptModule(questions).then((responses)) -> {
+inquirer.prompt(questions).then((responses)=>{
+    console.log(responses)
 console.log("creating README.md file...");
-writeToFile("./README.md");
-}}
+writeToFile("README.md",generateMarkdown(responses));
+})}
 
 // function call to initialize program
 init();
