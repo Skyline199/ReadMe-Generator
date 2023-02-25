@@ -12,7 +12,7 @@ when creating a project
 ![image](https://user-images.githubusercontent.com/119163387/221379733-cef040f2-7f14-493e-8c2c-4e82a201101c.png)
 
 ## Credits 
-private tutors aswell as course administrator 
+private tutor ( Matthew Calimbas) helped with connecting markdown with questions and a few lines where command wasn't working aswell as course administrator 
 ## License 
 none used for this project usually MIT
 ## Tests
